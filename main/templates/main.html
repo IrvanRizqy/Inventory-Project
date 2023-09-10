@@ -1,6 +1,65 @@
-<h1>Shopping List Page</h1>
+<!DOCTYPE html>
 
-<h5>Name: </h5>
-<p>{{ name }}<p>
-<h5>Class: </h5>
-<p>{{ class }}<p>
+<html>
+<head>
+    <title>Weapon Selection</title>
+</head>
+<body>
+
+    <h1>Weapon Selection</h1>
+    <h3>Name: <p>{{ name }}</p></h3>
+    <h3>Class: <p>{{ class }}</p></h3>
+
+    <br>    
+
+    <table bgcolor="black">
+        <tr bgcolor="grey">
+            <th width="150">Model</th>
+            <th width="150">Name</th>
+            <th width="150">Amount</th>
+            <th width="150">Description</th>
+            <th width="150">Category</th>
+            <th width="150">Stats</th>
+        </tr>
+        <tr bgcolor="lightgrey" align="middle">
+            <td width="150"><img src="GearGraphic_Coilgun (png).png" height="100"></td>
+            <td width="150">ArmsKore Coil Gun</td>
+            <td width="150">11</td>
+            <td width="150">A miniaturized electromagnetic coilgun surrounded by technological components as part of its bulky exterior which fires projectiles capable of piercing through solid rock and enemies.</td>
+            <td width="150">Secondary Weapon</td>
+            <td width="200" align="left"><ul>
+                <li>Damage : 130</li>
+                <li>Magazine Size : 1</li>
+                <li>Max Ammo : 640</li>
+                <li>Reload Time : 2.5s</li>
+                <li>Charged Shot Ammo Use : 40</li>
+                </ul></td>
+        </tr>
+        <tr bgcolor="lightgrey" align="middle">
+            <td width="150"><img src="GearGraphic_Drills (png).png" height="100"></td>
+            <td width="150">Reinforced Power Drills</td>
+            <td width="150">20</td>
+            <td width="150">The Driller's mobility tool. They are a pair of massive handheld drills mounted up to the Driller's forearms.</td>
+            <td width="150">Support Tool</td>
+            <td width="200" align="left"><ul>
+                <li>Damage : 5 Melee</li>
+                <li>Overheat Duration : 8s</li>
+                <li>Max Fuel : 38</li>
+                <li>Mining Rate : 1.5/li>
+                <li>Max Heat : 5.5</li>
+                </ul></td>
+        </tr>
+        <tr bgcolor="lightgrey" align="middle">
+            <td width="150"><img src="GearGraphic_PickAxe (png).png" height="100"></td>
+            <td width="150">Pickaxe</td>
+            <td width="150">68</td>
+            <td width="150">The Pickaxe is a fundamental Support Tool available to every class. It allows the player to shape the environment around them.</td>
+            <td width="150">Support Tool</td>
+            <td width="200" align="left"><ul>
+                <li>Damage : 27.5 Melee</li>
+                <li>Armor Breaking : 150%</li>
+                </ul></td>
+        </tr>
+    </table>
+</body>    
+</html>
