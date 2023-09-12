@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 def show_main(request):
     context = {
-        'name': 'IrvanRizqy',
+        'name': 'Irvan Rizqy Kusuma',
+        'npm': '2206083514',
         'class': 'PBP A',
         'name1': "ArmsKore Coil Gun",
         'name2': "Reinforced Power Drills",
