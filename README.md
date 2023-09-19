@@ -68,7 +68,8 @@ MVC (Model-View-Controller), MVT (Model-View-Template), dan MVVM (Model-View-Vie
        -> ViewModel: Bagian yang bertugas untuk mengonversi data dari Model menjadi bentuk yang lebih sesuai untuk ditampilkan oleh View. Ini memungkinkan tampilan untuk berinteraksi dengan data tanpa perlu tahu banyak tentang Model.
        <->Perbedaan : MVVM sering digunakan dalam pengembangan aplikasi berbasis pengguna seperti aplikasi mobile dan desktop.ViewModel digunakan sebagai komponen tambahan yang memungkinkan pemisahan lebih jelas antara tampilan dan logika bisnis.
 
----------------------------------------------------------------------------------------------------------------------------------------------(Tugas 3)
+---------------------------------------------------------------------------------------------------------------------------------------------
+(Tugas 3)
 
 1. Apa perbedaan antara form POST dan form GET dalam Django?
 
