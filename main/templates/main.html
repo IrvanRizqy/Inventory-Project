@@ -6,13 +6,17 @@
 </head>
 <body style="background-color:#e0b92b;">
 
+    {% extends 'base.html' %}
+
+    {% block content %}
+
     <center>
         <h1>Dwarves Weapon Selection</h1>
         <h3>Name: {{ name }}</h3>
         <h3>NPM: {{ npm }}</h3>
         <h3>Class: {{ class }}</p></h3>
     
-    <br>    
+        <br>    
 
         <table bgcolor="black">
             <tr bgcolor="grey">
@@ -63,6 +67,38 @@
                     </ul></td>
             </tr>
         </table>
-    </center>    
+
+        <br>
+
+        <table bgcolor="black">
+            <tr bgcolor="grey">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Date Added</th>
+            </tr>
+        
+            {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
+        
+            {% for product in products %}
+                <tr bgcolor="lightgrey">
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.date_added}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+        <br />
+        
+        <a href="{% url 'main:create_product' %}">
+            <button>
+                Add New Product
+            </button>
+        </a>
+    </center>
+
+    {% endblock content %}
 </body>    
 </html>
