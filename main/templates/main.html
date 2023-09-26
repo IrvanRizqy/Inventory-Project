@@ -97,6 +97,14 @@
                 Add New Product
             </button>
         </a>
+
+        <a href="{% url 'main:logout' %}">
+            <button>
+                Logout
+            </button>
+        </a>
+
+        <h4>Sesi terakhir login: {{ last_login }}</h4>
     </center>
 
     {% endblock content %}
