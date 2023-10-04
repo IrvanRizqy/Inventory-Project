@@ -18,12 +18,12 @@
     
         <br>    
 
-        <table bgcolor="black">
-            <tr bgcolor="grey">
+        <table class="table table-bordered w-auto">
+            <tr bgcolor="grey" align="middle">
                 <th width="150">Model</th>
                 <th width="150">Name</th>
                 <th width="150">Amount (in stock)</th>
-                <th width="150">Description</th>
+                <th width="300">Description</th>
                 <th width="150">Category</th>
                 <th width="150">Stats</th>
             </tr>
@@ -31,7 +31,7 @@
                 <td width="150"><img src="https://static.wikia.nocookie.net/deeprockgalactic_gamepedia_en/images/4/4b/GearGraphic_Coilgun.png/revision/latest?cb=20220429173708" height="100"></td>
                 <td width="150">{{ name1 }}</td>
                 <td width="150">{{ amount1 }}</td>
-                <td width="150">{{ description1 }}</td>
+                <td width="300">{{ description1 }}</td>
                 <td width="150">{{ category1 }}</td>
                 <td width="200" align="left"><ul>
                     <li>{{ stats1a }}</li>
@@ -45,7 +45,7 @@
                 <td width="150"><img src="https://static.wikia.nocookie.net/deeprockgalactic_gamepedia_en/images/f/f3/GearGraphic_Drills.png/revision/latest?cb=20181213192809" height="100"></td>
                 <td width="150">{{ name2 }}</td>
                 <td width="150">{{ amount2 }}</td>
-                <td width="150">{{ description2 }}</td>
+                <td width="300">{{ description2 }}</td>
                 <td width="150">{{ category2 }}</td>
                 <td width="200" align="left"><ul>
                     <li>{{ stats2a }}</li>
@@ -59,7 +59,7 @@
                 <td width="150"><img src="https://static.wikia.nocookie.net/deeprockgalactic_gamepedia_en/images/d/db/GearGraphic_PickAxe.png/revision/latest?cb=20181213194347" height="100"></td>
                 <td width="150">{{ name3 }}</td>
                 <td width="150">{{ amount3 }}</td>
-                <td width="150">{{ description3 }}</td>
+                <td width="300">{{ description3 }}</td>
                 <td width="150">{{ category3 }}</td>
                 <td width="200" align="left"><ul>
                     <li>{{ stats3a }}</li>
@@ -71,11 +71,12 @@
         <br>
 
         <table bgcolor="black">
-            <tr bgcolor="grey">
+            <tr bgcolor="grey" align="middle">
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
                 <th>Date Added</th>
+                <th>Edit</th>
             </tr>
         
             {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
@@ -86,6 +87,18 @@
                     <td>{{product.price}}</td>
                     <td>{{product.description}}</td>
                     <td>{{product.date_added}}</td>
+                    <td>
+                        <a href="{% url 'main:edit_product' product.pk %}">
+                            <button>
+                                Edit
+                            </button>
+                        </a>
+                        <a href="{% url 'main:delete_product' product.pk %}">
+                            <button>
+                                Delete
+                            </button>
+                        </a>
+                    </td>
                 </tr>
             {% endfor %}
         </table>
@@ -104,7 +117,7 @@
             </button>
         </a>
 
-        <h4>Sesi terakhir login: {{ last_login }}</h4>
+        <h5>Sesi terakhir login: {{ last_login }}</h5>
     </center>
 
     {% endblock content %}

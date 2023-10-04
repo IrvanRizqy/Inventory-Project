@@ -226,3 +226,103 @@ Penggunaan cookies dalam pengembangan web adalah praktik yang umum dan berguna, 
 - Sebelum melakukan migrasi pastikan semua perubahan telah disimpan, jika sudah lakukan migrasi model dengan `python manage.py makemigrations`.
 - Seharusnya, akan muncul error saat melakukan migrasi model. Pilih `1` untuk menetapkan default value untuk field user pada semua row yang telah dibuat pada basis data.
 - Ketik angka 1 lagi untuk menetapkan user dengan ID 1 (yang sudah kita buat sebelumnya) pada model yang sudah ada.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+(Tugas 5)
+
+1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+
+Element selector adalah bagian dari bahasa pemrograman CSS (Cascading Style Sheets) yang digunakan untuk memilih elemen HTML tertentu dan menerapkan gaya atau styling ke elemen tersebut. Setiap jenis elemen selector memiliki manfaatnya sendiri dan digunakan pada situasi yang berbeda-beda. Berikut adalah beberapa jenis elemen selector beserta manfaat dan waktu yang tepat untuk menggunakannya:
+
+1. Universal Selector (*):
+Manfaat: Universal selector berfungsi untuk memilih semua elemen di dalam dokumen HTML.
+Waktu yang tepat: Penggunaan universal selector sebaiknya dibatasi karena dapat memengaruhi semua elemen di halaman web. Biasanya digunakan untuk mereset atau mengatur nilai default CSS.
+2. Element Selector (Tag Selector):
+Manfaat: Selector elemen berfungsi untuk memilih semua elemen dengan tag yang sama, misalnya, <p>, <h1>, atau <div>.
+Waktu yang tepat: Ini cocok digunakan ketika Anda ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu di seluruh halaman web.
+3. Class Selector (.classname):
+Manfaat: Class selector berfungsi untuk memilih elemen berdasarkan nama kelas yang diberikan. Kelas dapat digunakan untuk mengelompokkan elemen dengan gaya yang sama.
+Waktu yang tepat: Class selector digunakan ketika ingin menerapkan gaya yang sama pada beberapa elemen yang berbeda dengan kelas yang sama.
+4. ID Selector (#idname):
+Manfaat: ID selector berfungsi untuk memilih elemen berdasarkan ID unik yang diberikan. ID harus unik di dalam halaman.
+Waktu yang tepat: ID selector digunakan ketika ingin menerapkan gaya atau perilaku khusus pada satu elemen tertentu dalam halaman.
+5. Attribute Selector ([attribute=value]):
+Manfaat: Attribute selector berfungsi untuk memilih elemen berdasarkan atribut dan nilainya, seperti <a href="...">.
+Waktu yang tepat: Ini berguna saat ingin memilih elemen berdasarkan atribut tertentu, seperti mengubah gaya tautan dengan atribut href.
+6. Pseudo-class Selector (:pseudo-class):
+Manfaat: Pseudo-class selector berfungsi untuk memilih elemen berdasarkan keadaan atau interaksi pengguna, seperti :hover untuk mengganti tampilan saat kursor berada di atas elemen.
+Waktu yang tepat: Digunakan untuk mengatur perilaku atau tampilan elemen berdasarkan tindakan pengguna, seperti tautan yang berubah warna saat dihover.
+7. Pseudo-element Selector (::pseudo-element):
+Manfaat: Pseudo-element selector berfungsi untuk memilih dan menggaya bagian-bagian khusus dari elemen, seperti ::before untuk menambahkan konten sebelum elemen.
+Waktu yang tepat: Digunakan untuk menambahkan konten atau gaya khusus ke bagian-bagian tertentu dari elemen, seperti menambahkan ikon sebelum teks.
+
+2. Jelaskan HTML5 Tag yang kamu ketahui.
+
+1. <header>: Digunakan untuk mendefinisikan bagian atas atau kepala halaman web. Biasanya berisi elemen-elemen seperti judul, logo, dan navigasi utama.
+2. <nav>: Menunjukkan bagian navigasi dalam halaman web, seperti menu utama atau menu pilihan.
+3. <article>: Digunakan untuk mengelompokkan konten independen yang dapat berdiri sendiri, seperti artikel berita atau posting blog.
+4. <section>: Merepresentasikan bagian dalam halaman web yang memiliki tema atau konten yang terkait secara tematis.
+5. <aside>: Menunjukkan konten yang berkaitan dengan konten di sekitarnya, tetapi tidak penting untuk pemahaman utama halaman.
+6. <main>: Mendefinisikan konten utama dalam halaman web. Hanya boleh ada satu elemen <main> dalam satu halaman.
+7. <figure> dan <figcaption>: <figure> digunakan untuk mengelompokkan elemen media seperti gambar atau video dengan deskripsi atau keterangan yang diwakili oleh elemen <figcaption>.
+8. <footer>: Menunjukkan bagian bawah atau kaki halaman web. Biasanya berisi informasi kontak, tautan legal, atau hak cipta.
+9. <time>: Digunakan untuk menandai waktu atau tanggal dalam konten. Ini memungkinkan mesin pencari dan perangkat lainnya untuk lebih memahami konten yang berhubungan dengan waktu.
+10. <mark>: Digunakan untuk menyorot atau menandai teks yang relevan atau penting dalam konten.
+
+3. Jelaskan perbedaan antara margin dan padding.
+
+Margin dan padding adalah dua konsep penting dalam CSS (Cascading Style Sheets) yang digunakan untuk mengatur tata letak dan tampilan elemen dalam halaman web. Meskipun keduanya memengaruhi jarak antara elemen, mereka memiliki perbedaan yang signifikan:
+
+1. Margin:
+- Margin adalah ruang di luar batas luar elemen. Ini adalah jarak antara elemen tersebut dengan elemen-elemen lain di sekitarnya.
+- Margin tidak memiliki latar belakang atau warna, dan konten tidak dapat ditempatkan dalam margin. Margin hanyalah area kosong yang memisahkan elemen dari elemen-elemen lainnya di sekitarnya.
+- Margin digunakan untuk mengontrol jarak antara elemen-elemen satu sama lain di halaman web. Ini dapat digunakan untuk memberikan jarak vertikal atau horizontal antara elemen-elemen.
+Padding:
+
+2. Padding:
+- Padding adalah ruang di dalam batas elemen. Ini adalah jarak antara batas elemen dan kontennya sendiri.
+- Padding dapat memiliki latar belakang atau warna dan dapat berisi konten. Ini berarti Anda dapat mengisi padding dengan warna atau gambar latar belakang, dan konten (teks, gambar, dll.) dalam elemen akan muncul di dalam padding.
+- Padding digunakan untuk mengontrol ruang di sekitar konten dalam elemen. Ini sering digunakan untuk mengatur tampilan elemen, seperti memberikan ruang di antara teks dan batas elemen atau mengisi bidang input dalam formulir.
+
+Dalam ringkasannya, margin adalah ruang di luar elemen yang tidak memiliki latar belakang atau konten, sementara padding adalah ruang di dalam elemen yang dapat memiliki latar belakang dan mengandung konten.
+
+4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+
+Bootstrap dan Tailwind CSS adalah dua framework CSS yang populer digunakan untuk membangun antarmuka pengguna (UI) dalam pengembangan web. Mereka memiliki pendekatan dan karakteristik yang berbeda, sehingga ada situasi di mana salah satu framework lebih cocok daripada yang lain. Berikut perbandingan antara Bootstrap dan Tailwind CSS serta kapan sebaiknya Anda menggunakan salah satu dari keduanya:
+
+Bootstrap:
+- Pendekatan: Bootstrap adalah framework CSS yang mendefinisikan komponen UI yang siap pakai (seperti tombol, navigasi, kartu, dll.) dengan gaya bawaan. Bootstrap menggunakan kelas yang sudah ada untuk mengatur tampilan elemen.
+- Desain: Bootstrap memiliki desain bawaan yang terlihat profesional dan cukup umum. Desainnya terstruktur dan mudah diimplementasikan tanpa perlu banyak penyesuaian.
+- Kesempatan Belajar: Lebih cepat untuk memulai karena Anda tidak perlu menulis banyak kode CSS kustom. Sangat cocok untuk pemula.
+- Kemampuan Kustomisasi: Bootstrap dapat disesuaikan dengan menggunakan variabel Sass atau Less, tetapi ada batasan dalam hal sejauh mana Anda dapat mengubah tampilan tanpa menimpa banyak aturan bawaan.
+
+Tailwind CSS:
+- Pendekatan: Tailwind CSS adalah framework CSS yang memberikan utilitas CSS ke setiap elemen HTML. Anda membangun UI dengan menggabungkan kelas-kelas utilitas dalam HTML.
+- Desain: Tailwind memberikan fleksibilitas yang besar dalam merancang tampilan sesuai kebutuhan Anda. Anda dapat membuat desain yang unik dan khusus.
+- Kesempatan Belajar: Memerlukan waktu lebih lama untuk memahami dan memanfaatkan Tailwind sepenuhnya karena Anda perlu memahami berbagai kelas utilitas yang tersedia.
+- Kemampuan Kustomisasi: Tailwind sangat kustomisabel, dan Anda dapat membuat tampilan yang sangat khusus. Anda bahkan dapat menyesuaikan setiap aspek dari desain dengan mudah.
+
+Gunakan Bootstrap jika:
+- Anda membutuhkan prototipe cepat atau membangun situs web dengan desain standar yang terlihat profesional.
+- Anda adalah pemula dalam pengembangan web dan ingin memulai dengan cepat tanpa harus menggali terlalu dalam ke dalam CSS kustom.
+- Anda membangun proyek yang lebih kecil dengan anggaran waktu yang terbatas.
+
+Gunakan Tailwind CSS jika:
+- Anda ingin kontrol yang lebih besar atas desain dan tampilan UI Anda, dan Anda ingin menciptakan desain yang unik.
+- Anda siap untuk belajar dan berinvestasi waktu dalam memahami cara menggunakan dan menyesuaikan Tailwind CSS.
+- Anda membangun proyek yang lebih besar dan kompleks yang memerlukan fleksibilitas tinggi dalam desain.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+- Pertama tambahkan bootstrap ke aplikasi.
+- Untuk menambahkannya masuk kedalam file `base.html` didalam folder project django dan tambahkan tag `<meta name="viewport">`.
+- Lalu tambahkan Bootstrap CSS dan juga JS (Kode yang digunakan untuk mengisi berkas terdapat pada tutorial4).
+- Untuk mengkostumisasi halaman inventory saya menggunakan fitur edit & hapus produk.
+- Dalam berkas `views.py` pada folder main saya buat fungsi baru dengan nama `edit_product` & `delete_product`.
+- Agar bisa mengedi produk semau kita, saya menambahkan berkas HTML baru dengan nama `edit_product.html` (Kode yang digunakan untuk mengisi berkas terdapat pada tutorial4).
+- Dan mengimpornya kedalam berkas yang sama menggunakan `from main.views import edit_product` & `from main.views import delete_product`.
+- Lalu menambahkan path url ke dalam `urlpatterns` untuk mengakses fungsi yang sudah diimpor.
+- Terakhir tambahkan tombol agar bisa mengakses dengan satu klik.
+- Untuk mengkostumisasi halaman login & register saya mengubah warna halaman menjadi sama dengan halaman utama.
+- Caranya dengan menggunakan fungsi `Background-color` yang dimasukkan kedalam element `<style></Style>`.
+- Dan terakhir saya menggunakan element `<center></center>` untuk memfokuskan pandangan pengguna pada forum input.
