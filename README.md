@@ -234,40 +234,40 @@ Penggunaan cookies dalam pengembangan web adalah praktik yang umum dan berguna, 
 
 Element selector adalah bagian dari bahasa pemrograman CSS (Cascading Style Sheets) yang digunakan untuk memilih elemen HTML tertentu dan menerapkan gaya atau styling ke elemen tersebut. Setiap jenis elemen selector memiliki manfaatnya sendiri dan digunakan pada situasi yang berbeda-beda. Berikut adalah beberapa jenis elemen selector beserta manfaat dan waktu yang tepat untuk menggunakannya:
 
-1. Universal Selector (*):
+- Universal Selector (*):
 Manfaat: Universal selector berfungsi untuk memilih semua elemen di dalam dokumen HTML.
 Waktu yang tepat: Penggunaan universal selector sebaiknya dibatasi karena dapat memengaruhi semua elemen di halaman web. Biasanya digunakan untuk mereset atau mengatur nilai default CSS.
-2. Element Selector (Tag Selector):
-Manfaat: Selector elemen berfungsi untuk memilih semua elemen dengan tag yang sama, misalnya, <p>, <h1>, atau <div>.
+- Element Selector (Tag Selector):
+Manfaat: Selector elemen berfungsi untuk memilih semua elemen dengan tag yang sama, misalnya, `<p>`, `<h1>`, atau `<div>`.
 Waktu yang tepat: Ini cocok digunakan ketika Anda ingin menerapkan gaya yang sama pada semua elemen dengan tag tertentu di seluruh halaman web.
-3. Class Selector (.classname):
+- Class Selector (.classname):
 Manfaat: Class selector berfungsi untuk memilih elemen berdasarkan nama kelas yang diberikan. Kelas dapat digunakan untuk mengelompokkan elemen dengan gaya yang sama.
 Waktu yang tepat: Class selector digunakan ketika ingin menerapkan gaya yang sama pada beberapa elemen yang berbeda dengan kelas yang sama.
-4. ID Selector (#idname):
+- ID Selector (#idname):
 Manfaat: ID selector berfungsi untuk memilih elemen berdasarkan ID unik yang diberikan. ID harus unik di dalam halaman.
 Waktu yang tepat: ID selector digunakan ketika ingin menerapkan gaya atau perilaku khusus pada satu elemen tertentu dalam halaman.
-5. Attribute Selector ([attribute=value]):
-Manfaat: Attribute selector berfungsi untuk memilih elemen berdasarkan atribut dan nilainya, seperti <a href="...">.
+- Attribute Selector ([attribute=value]):
+Manfaat: Attribute selector berfungsi untuk memilih elemen berdasarkan atribut dan nilainya, seperti `<a href="...">`. 
 Waktu yang tepat: Ini berguna saat ingin memilih elemen berdasarkan atribut tertentu, seperti mengubah gaya tautan dengan atribut href.
-6. Pseudo-class Selector (:pseudo-class):
+- Pseudo-class Selector (:pseudo-class):
 Manfaat: Pseudo-class selector berfungsi untuk memilih elemen berdasarkan keadaan atau interaksi pengguna, seperti :hover untuk mengganti tampilan saat kursor berada di atas elemen.
 Waktu yang tepat: Digunakan untuk mengatur perilaku atau tampilan elemen berdasarkan tindakan pengguna, seperti tautan yang berubah warna saat dihover.
-7. Pseudo-element Selector (::pseudo-element):
+- Pseudo-element Selector (::pseudo-element):
 Manfaat: Pseudo-element selector berfungsi untuk memilih dan menggaya bagian-bagian khusus dari elemen, seperti ::before untuk menambahkan konten sebelum elemen.
 Waktu yang tepat: Digunakan untuk menambahkan konten atau gaya khusus ke bagian-bagian tertentu dari elemen, seperti menambahkan ikon sebelum teks.
 
 2. Jelaskan HTML5 Tag yang kamu ketahui.
 
-1. <header>: Digunakan untuk mendefinisikan bagian atas atau kepala halaman web. Biasanya berisi elemen-elemen seperti judul, logo, dan navigasi utama.
-2. <nav>: Menunjukkan bagian navigasi dalam halaman web, seperti menu utama atau menu pilihan.
-3. <article>: Digunakan untuk mengelompokkan konten independen yang dapat berdiri sendiri, seperti artikel berita atau posting blog.
-4. <section>: Merepresentasikan bagian dalam halaman web yang memiliki tema atau konten yang terkait secara tematis.
-5. <aside>: Menunjukkan konten yang berkaitan dengan konten di sekitarnya, tetapi tidak penting untuk pemahaman utama halaman.
-6. <main>: Mendefinisikan konten utama dalam halaman web. Hanya boleh ada satu elemen <main> dalam satu halaman.
-7. <figure> dan <figcaption>: <figure> digunakan untuk mengelompokkan elemen media seperti gambar atau video dengan deskripsi atau keterangan yang diwakili oleh elemen <figcaption>.
-8. <footer>: Menunjukkan bagian bawah atau kaki halaman web. Biasanya berisi informasi kontak, tautan legal, atau hak cipta.
-9. <time>: Digunakan untuk menandai waktu atau tanggal dalam konten. Ini memungkinkan mesin pencari dan perangkat lainnya untuk lebih memahami konten yang berhubungan dengan waktu.
-10. <mark>: Digunakan untuk menyorot atau menandai teks yang relevan atau penting dalam konten.
+- `<header>`: Digunakan untuk mendefinisikan bagian atas atau kepala halaman web. Biasanya berisi elemen-elemen seperti judul, logo, dan navigasi utama.
+- `<nav>`: Menunjukkan bagian navigasi dalam halaman web, seperti menu utama atau menu pilihan.
+- `<article>`: Digunakan untuk mengelompokkan konten independen yang dapat berdiri sendiri, seperti artikel berita atau posting blog.
+- `<section>`: Merepresentasikan bagian dalam halaman web yang memiliki tema atau konten yang terkait secara tematis.
+- `<aside>`: Menunjukkan konten yang berkaitan dengan konten di sekitarnya, tetapi tidak penting untuk pemahaman utama halaman.
+- `<main>`: Mendefinisikan konten utama dalam halaman web. Hanya boleh ada satu elemen `<main>` dalam satu halaman.
+- `<figure>` dan `<figcaption>`: `<figure>` digunakan untuk mengelompokkan elemen media seperti gambar atau video dengan deskripsi atau keterangan yang diwakili oleh elemen `<figcaption>`.
+- `<footer>`: Menunjukkan bagian bawah atau kaki halaman web. Biasanya berisi informasi kontak, tautan legal, atau hak cipta.
+- `<time>`: Digunakan untuk menandai waktu atau tanggal dalam konten. Ini memungkinkan mesin pencari dan perangkat lainnya untuk lebih memahami konten yang berhubungan dengan waktu.
+- `<mark>`: Digunakan untuk menyorot atau menandai teks yang relevan atau penting dalam konten.
 
 3. Jelaskan perbedaan antara margin dan padding.
 
