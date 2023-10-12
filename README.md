@@ -474,3 +474,5 @@ Namun, jika Anda perlu mendukung browser yang lebih tua atau ingin menghemat wak
 - Dan pada block `<Script>` tambah fungsi baru dengan nama `refreshProducts()` untuk me-refresh data produk secara asynchronous.
 - Lajut ke tahap selanjutnya membuat modal dan buttonnya untuk menambahkan produk (Kode yang digunakan untuk mengisi berkas terdapat pada tutorial5).
 - Terakhir menambahkan data product dengan AJAX. pada block `<Script>` tambahkan fungsi baru dengan nama `addProduct()` dan menambahkan fungsi `onclick` pada button "Add Product" (Kode yang digunakan untuk mengisi fungsi terdapat pada tutorial5).
+- Lanjut dengan melakukan perintah collectstatic. Pertama mengonfigurasi File settings.py dengan `STATIC_URL = '/static/'` & `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`
+- Kemudian import Modul `os` dan menjalankan perintah `python manage.py collectstatic` untuk mengumpulkan File Static
