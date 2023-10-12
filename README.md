@@ -3,6 +3,7 @@ NPM: 2206083514
 Kelas: PBP A
 
 Link : [Adaptable Link](https://dwarves-weapon-inventory.adaptable.app/main/)
+Link : [PaaS PBP](http://irvan-rizqy-tugas.pbp.cs.ui.ac.id/login/?next=/)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 (Tugas 2)
