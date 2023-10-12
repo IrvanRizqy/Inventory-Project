@@ -326,3 +326,151 @@ Gunakan Tailwind CSS jika:
 - Untuk mengkostumisasi halaman login & register saya mengubah warna halaman menjadi sama dengan halaman utama.
 - Caranya dengan menggunakan fungsi `Background-color` yang dimasukkan kedalam element `<style></Style>`.
 - Dan terakhir saya menggunakan element `<center></center>` untuk memfokuskan pandangan pengguna pada forum input.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+(Tugas 6)
+
+1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+
+Asynchronous programming dan synchronous programming adalah dua paradigma pemrograman yang berbeda dalam cara mereka mengelola eksekusi kode dan menangani tugas-tugas yang memerlukan waktu, seperti I/O (input/output) atau jaringan. Berikut adalah perbedaan utama antara keduanya:
+
+- Synchronous Programming (Program Sinkron):
+
+Eksekusi berurutan: Dalam pemrograman sinkron, kode dieksekusi secara berurutan dari atas ke bawah. Setiap operasi harus menunggu operasi sebelumnya selesai sebelum dapat dijalankan.
+Blocking: Jika ada operasi yang memerlukan waktu seperti membaca data dari disk atau mengambil data melalui jaringan, program akan terblokir (blocking) sementara menunggu operasi tersebut selesai. Selama periode ini, aplikasi tidak dapat melakukan tugas lain.
+Lebih mudah dipahami: Pemrograman sinkron biasanya lebih mudah dipahami karena alur eksekusi kode lebih terstruktur.
+
+- Asynchronous Programming (Program Asinkron):
+
+Eksekusi non-berurutan: Dalam pemrograman asinkron, kode dapat menjalankan operasi tanpa harus menunggu operasi sebelumnya selesai. Ini memungkinkan program untuk menjalankan tugas-tugas lain selama operasi yang memerlukan waktu masih berjalan.
+Non-blocking: Dalam pemrograman asinkron, operasi-operasi yang memerlukan waktu biasanya non-blocking, yang berarti program dapat melanjutkan bekerja dengan operasi lain tanpa harus menunggu yang sedang berjalan.
+Kompleksitas tambahan: Pemrograman asinkron biasanya lebih kompleks dibandingkan pemrograman sinkron karena memerlukan pemahaman tentang callback, promise, async/await, atau konsep serupa.
+
+2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+
+Paradigma event-driven programming adalah paradigma pemrograman di mana eksekusi kode program terutama ditentukan oleh kejadian (events) yang terjadi dalam sistem atau aplikasi. Dalam konteks JavaScript dan AJAX (Asynchronous JavaScript and XML), paradigma ini sangat relevan karena JavaScript sering digunakan untuk menangani interaksi pengguna dan permintaan asinkron ke server. Berikut beberapa poin penting tentang paradigma event-driven programming:
+
+- Kejadian (events): Kejadian adalah tindakan atau peristiwa yang terjadi dalam aplikasi atau lingkungan eksternal. Contoh kejadian dalam aplikasi web termasuk klik tombol, pengisian formulir, atau penerimaan respons dari server.
+
+- Penanganan kejadian (event handling): Dalam paradigma ini, Anda menentukan bagaimana program akan merespons setiap jenis kejadian. Anda menentukan fungsi atau kode yang akan dieksekusi ketika suatu kejadian terjadi.
+
+Contoh penerapan paradigma event-driven programming dalam JavaScript dan AJAX pada tugas ini adalah mengambil dan menampilkan data dari server saat pengguna berinteraksi dengan elemen pada halaman web. Misalnya, jika Anda memiliki tombol "Muat Data" dalam halaman web, Anda dapat mengaitkan fungsi JavaScript dengan peristiwa klik tombol ini. Ketika pengguna mengklik tombol tersebut, fungsi tersebut akan dijalankan, dan permintaan AJAX akan dikirim ke server untuk mengambil data. Setelah data diterima, Anda dapat menampilkan data tersebut pada halaman web tanpa perlu mereload seluruh halaman.
+
+Berikut contoh sederhana menggunakan JavaScript dan AJAX untuk menggambarkan penerapan paradigma event-driven programming:
+
+// Mengaitkan fungsi dengan kejadian klik tombol
+document.getElementById('load-data-button').addEventListener('click', function() {
+  // Membuat permintaan AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'data.json', true);
+
+  // Mengatur penanganan respons dari server
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Menampilkan data pada halaman web
+      var data = JSON.parse(xhr.responseText);
+      document.getElementById('data-container').innerHTML = data.message;
+    } else {
+      console.error('Gagal mengambil data: ' + xhr.statusText);
+    }
+  };
+
+  // Mengirim permintaan ke server
+  xhr.send();
+});
+
+Dalam contoh ini, event-driven programming digunakan untuk menentukan bahwa ketika tombol dengan ID 'load-data-button' diklik, maka permintaan AJAX akan dikirim ke server, dan respons dari server akan ditampilkan pada elemen dengan ID 'data-container'. Ini adalah contoh yang sederhana, namun mengilustrasikan cara paradigma ini digunakan dalam interaksi pengguna dengan aplikasi web yang berbasis JavaScript dan AJAX.
+
+3. Jelaskan penerapan asynchronous programming pada AJAX.
+
+Penerapan asynchronous programming pada AJAX adalah salah satu dari prinsip dasar dalam penggunaan teknologi AJAX (Asynchronous JavaScript and XML). Pemrograman asinkron dalam konteks AJAX memungkinkan Anda untuk mengirim permintaan ke server dan menerima respons tanpa menghentikan atau memblokir eksekusi kode JavaScript lainnya. Ini adalah prinsip yang sangat penting karena tugas-tugas seperti mengambil data dari server atau mengirim data ke server biasanya memerlukan waktu yang signifikan, dan aplikasi web harus tetap responsif selama proses ini berlangsung.
+
+Berikut adalah langkah-langkah penerapan asynchronous programming pada AJAX:
+
+Membuat objek XMLHttpRequest atau menggunakan Fetch API: Anda dapat menggunakan objek XMLHttpRequest atau Fetch API untuk membuat permintaan HTTP ke server. Kedua teknologi ini mendukung pemrograman asinkron dan memungkinkan Anda untuk mengirim permintaan tanpa harus menunggu respons.
+
+Contoh dengan XMLHttpRequest:
+
+var xhr = new XMLHttpRequest();
+
+Contoh dengan Fetch API:
+
+fetch('https://example.com/api/data')
+  .then(response => response.json())
+  .then(data => {
+    // Lakukan sesuatu dengan data yang diterima
+  })
+  .catch(error => {
+    // Tangani kesalahan jika terjadi
+  });
+
+Mengatur callback atau promise: Setelah Anda membuat objek permintaan, Anda perlu mengatur apa yang harus dilakukan ketika respons dari server sudah tersedia. Dalam JavaScript modern, ini sering dilakukan menggunakan callback atau promise.
+
+Contoh dengan XMLHttpRequest (callback):
+
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var response = JSON.parse(xhr.responseText);
+    // Lakukan sesuatu dengan respons yang diterima
+  }
+};
+
+Contoh dengan Fetch API (promise):
+
+fetch('https://example.com/api/data')
+  .then(response => response.json())
+  .then(data => {
+    // Lakukan sesuatu dengan data yang diterima
+  })
+  .catch(error => {
+    // Tangani kesalahan jika terjadi
+  });
+Mengirim permintaan ke server: Setelah objek permintaan diatur, Anda dapat mengirim permintaan ke server.
+
+Contoh dengan XMLHttpRequest:
+
+xhr.open('GET', 'https://example.com/api/data', true);
+xhr.send();
+
+Contoh dengan Fetch API:
+
+fetch('https://example.com/api/data')
+  .then(response => response.json())
+  .then(data => {
+    // Lakukan sesuatu dengan data yang diterima
+  })
+  .catch(error => {
+    // Tangani kesalahan jika terjadi
+  });
+
+4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+
+Pemilihan antara menggunakan Fetch API atau library jQuery untuk menerapkan AJAX tergantung pada kebutuhan proyek Anda dan preferensi Anda. Berikut adalah perbandingan antara kedua teknologi ini:
+
+Fetch API:
+
+Built-in di Browsers Modern: Fetch API adalah bagian dari spesifikasi JavaScript modern dan sudah tersedia di hampir semua browser terbaru tanpa perlu mengunduh atau menginstal apa pun tambahan.
+Promise-based: Fetch API menggunakan promise untuk mengelola permintaan asinkron, yang membuatnya lebih mudah untuk menangani tugas-tugas asinkron dan menghindari callback hell.
+Ringan: Fetch API memiliki footprints yang lebih kecil dibandingkan dengan library jQuery karena fokus utamanya adalah mengelola permintaan HTTP saja.
+jQuery:
+
+Cross-browser Compatibility: Salah satu keunggulan utama jQuery adalah kompatibilitas lintas browser yang kuat. Ini dapat mengatasi perbedaan perilaku browser dengan konsistensi yang lebih baik.
+API yang Lebih Tinggi: jQuery menyediakan antarmuka yang lebih tinggi dan abstraksi yang membuatnya lebih mudah digunakan, terutama untuk pemula. Anda dapat menulis kode dengan jumlah kode yang lebih sedikit untuk melakukan tugas-tugas umum.
+Plugins: jQuery memiliki ekosistem plugin yang luas yang dapat membantu Anda menambahkan fitur-fitur kompleks dengan cepat tanpa harus menulis kode dari awal.
+Pendapat Pribadi:
+Pemilihan antara Fetch API dan jQuery sangat bergantung pada konteks proyek. Jika Anda mengembangkan aplikasi web modern yang ditargetkan untuk browser terbaru atau memiliki kontrol atas versi browser yang digunakan pengguna Anda, maka Fetch API adalah pilihan yang baik. Ini adalah cara yang lebih modern, lebih ringan, dan menggunakan promise, yang dapat membuat kode Anda lebih terstruktur.
+
+Namun, jika Anda perlu mendukung browser yang lebih tua atau ingin menghemat waktu dalam pengembangan aplikasi sederhana dengan tugas-tugas umum seperti manipulasi DOM atau animasi, jQuery dapat menjadi pilihan yang masuk akal. Tetapi perlu diingat bahwa jQuery menjadi kurang populer dalam beberapa tahun terakhir karena perkembangan JavaScript modern, jadi pertimbangkan apakah investasi dalam pembelajaran Fetch API dan JavaScript modern adalah langkah yang lebih baik dalam jangka panjang.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+- Pertama buat Fungsi dengan nama `get_product_json` yang menerima parameter request untuk Mengembalikan Data JSON.
+- Lanjut dengan membuat Fungsi untuk Menambahkan Produk dengan AJAX. Caranya dengan membuat fungsi baru pada `views.py` dengan nama `add_product_ajax` yang menerima parameter `request`.
+- Lalu Impor `from django.views.decorators.csrf import csrf_exempt` pada berkas `views.py`.
+- Dan tambahkan dekorator `@csrf_exempt` di atas fungsi `add_product_ajax` (Kode yang digunakan untuk mengisi fungsi terdapat pada tutorial5).
+- Masuk ke tahap selanjutnya menambahkan Routing Untuk Fungsi `get_product_json` dan `add_product_ajax` pada berkas `urls.py` (Kode yang digunakan untuk mengisi berkas terdapat pada tutorial5).
+- Untuk menampilkan data product dengan Fetch() API hapus bagian kode table dengan kode `<table id="product_table"></table>`.
+- Lalu buat block `<Script>` di bagian bawah berkas `main.html` dan buat fungsi baru pada block `<Script>` dengan nama `getProducts()`.
+- Dan pada block `<Script>` tambah fungsi baru dengan nama `refreshProducts()` untuk me-refresh data produk secara asynchronous.
+- Lajut ke tahap selanjutnya membuat modal dan buttonnya untuk menambahkan produk (Kode yang digunakan untuk mengisi berkas terdapat pada tutorial5).
+- Terakhir menambahkan data product dengan AJAX. pada block `<Script>` tambahkan fungsi baru dengan nama `addProduct()` dan menambahkan fungsi `onclick` pada button "Add Product" (Kode yang digunakan untuk mengisi fungsi terdapat pada tutorial5).
